@@ -1,0 +1,12 @@
+{
+  "superpowers": [
+    { "id": 1, "name": "Super Speed", "description": "Run faster than the speed of light", "origin": "Cosmic Ray", "price": 999.99, "inStock": true },
+    { "id": 2, "name": "Invisibility", "description": "Become completely invisible at will", "origin": "Genetic Mutation", "price": 1499.99, "inStock": true },
+    { "id": 3, "name": "Telepathy", "description": "Read and control minds", "origin": "Ancient Artifact", "price": 2999.99, "inStock": false },
+    { "id": 4, "name": "Flight", "description": "Soar through the skies at any altitude", "origin": "Tech Suit", "price": 1999.99, "inStock": true },
+    { "id": 5, "name": "Super Strength", "description": "Lift objects up to 100 tons", "origin": "Radioactive Spider", "price": 799.99, "inStock": true }
+  ],
+  "store_info": [
+    { "id": 1, "name": "Superpower Shop", "description": "The world's only marketplace for real superpowers. Become the hero you were meant to be.", "phone": "555-POWER", "email": "powers@supershop.com" }
+  ]
+}

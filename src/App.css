@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f23;
+  color: #ccd6f6;
+  min-height: 100vh;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.85; }
+.btn-primary { background: #e94560; color: white; }
+.btn-secondary { background: #0f3460; color: white; }
+.btn-danger { background: #c0392b; color: white; }
+
+/* Home */
+.home-page { padding: 2rem; }
+.hero { text-align: center; padding: 4rem 2rem; }
+.hero h1 { font-size: 3rem; color: #e94560; margin-bottom: 1rem; }
+.hero-desc { font-size: 1.2rem; color: #a8b2d8; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+.hero-buttons { display: flex; gap: 1rem; justify-content: center; }
+.features { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; padding: 2rem; }
+.feature-card { background: #16213e; padding: 2rem; border-radius: 12px; text-align: center; width: 200px; }
+.feature-card span { font-size: 2rem; }
+.feature-card h3 { margin: 0.5rem 0; color: #e94560; }
+
+/* Shop */
+.shop-page { padding: 2rem; }
+.shop-page h1 { margin-bottom: 1rem; color: #e94560; }
+.search-input { width: 100%; padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid #0f3460; background: #16213e; color: #ccd6f6; font-size: 1rem; margin-bottom: 2rem; }
+.power-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+
+/* Power Card */
+.power-card { background: #16213e; border-radius: 12px; padding: 1.5rem; border: 1px solid #0f3460; }
+.power-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.power-card-header h3 { color: #e94560; font-size: 1.1rem; }
+.badge { padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-weight: bold; }
+.in-stock { background: #27ae60; color: white; }
+.out-stock { background: #7f8c8d; color: white; }
+.power-desc { color: #a8b2d8; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.power-origin { font-size: 0.85rem; margin-bottom: 0.25rem; }
+.power-price { font-size: 1rem; font-weight: bold; color: #e94560; margin-bottom: 1rem; }
+.power-actions { display: flex; gap: 0.5rem; }
+
+/* Detail & Forms */
+.detail-page, .add-page, .about-page { padding: 2rem; max-width: 700px; margin: 0 auto; }
+.detail-page h1, .add-page h1, .about-page h1 { color: #e94560; margin-bottom: 1rem; }
+.edit-form, .add-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+.edit-form label, .add-form label { display: flex; flex-direction: column; gap: 0.3rem; color: #a8b2d8; }
+.edit-form input, .add-form input, .add-form textarea { padding: 0.6rem; border-radius: 6px; border: 1px solid #0f3460; background: #16213e; color: #ccd6f6; font-size: 1rem; }
+.add-form textarea { min-height: 80px; resize: vertical; }
+.contact-info { margin-top: 2rem; background: #16213e; padding: 1.5rem; border-radius: 12px; }
+.contact-info h2 { color: #e94560; margin-bottom: 1rem; }
+
+/* Detail Hero */
+.detail-hero {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.detail-glow {
+  font-size: 5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.detail-title {
+  font-size: 2.5rem;
+  color: #e94560;
+  margin: 0.5rem 0;
+}
+
+.badge-large {
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-section {
+  background: #16213e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #e94560;
+}
+
+.detail-section h2 {
+  color: #e94560;
+  margin-bottom: 0.75rem;
+}
+
+.detail-description {
+  font-size: 1.1rem;
+  color: #ccd6f6;
+  line-height: 1.6;
+}
+
+.power-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.power-perks li {
+  font-size: 1rem;
+  color: #a8b2d8;
+}
+
+.detail-price-box {
+  background: linear-gradient(135deg, #0f3460, #16213e);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e94560;
+}
+
+.detail-price-label {
+  color: #a8b2d8;
+  margin-bottom: 0.5rem;
+}
+
+.detail-price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e94560;
+  margin-bottom: 1rem;
+}
+
+.btn-large {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+}
