@@ -1,16 +1,93 @@
-# React + Vite
+# ⚡ Superpower Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+Superpower Shop is a React-based e-commerce admin portal for managing and browsing superpowers. Built as a single-page application (SPA) using React, React Router v6, and a JSON Server backend, it demonstrates advanced React concepts including custom hooks, context API, client-side routing, and full CRUD operations.
 
-Currently, two official plugins are available:
+## Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![App Screenshot](./screenshot.png)
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Clone the repository and install dependencies:
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Start the backend (runs on port 6001):
+
+```bash
+npm run server
+```
+
+Start the frontend (runs on port 5173):
+
+```bash
+npm run dev
+```
+
+Run the test suite:
+
+```bash
+npm run test
+```
+
+## Features
+
+- **Browse Superpowers** — View all available superpowers with stock status and pricing
+- **Search** — Filter superpowers by name in real time
+- **View Detail** — Click any superpower for a full hyped-up detail page
+- **Add a Superpower** — Submit a form to POST a new superpower to the backend
+- **Admin Edit** — Update price and stock availability via PATCH request
+- **Delete** — Remove a superpower from the shop and backend via DELETE request
+
+## Routes
+
+| Route | Page |
+|---|---|
+| `/` | Home / Landing page |
+| `/superpowers` | Shop — browse all superpowers |
+| `/superpowers/new` | Add a new superpower |
+| `/superpowers/:id` | Detail view for a specific superpower |
+| `/superpowers/:id/edit` | Admin edit page |
+| `/about` | About the store |
+
+## Hooks Used
+
+| Hook | Location | Purpose |
+|---|---|---|
+| `useState` | Throughout | Local state management |
+| `useEffect` | Context, Detail | Data fetching and side effects |
+| `useContext` | All pages | Access global superpower state |
+| `useRef` | SuperpowerList | Persist search value without re-render |
+| `useId` | AddSuperpower | Generate unique accessible form IDs |
+| `useNavigate` | Forms | Programmatic navigation after submit |
+| `useParams` | Detail, Edit | Read URL parameters |
+| `useLocalStorage` | Custom hook | Persist data to browser localStorage |
+
+## CRUD Operations
+
+- **GET** — Fetch all superpowers on app load via `useEffect`
+- **POST** — Add a new superpower via the Add Power form
+- **PATCH** — Update price and stock status via the Admin Edit page
+- **DELETE** — Remove a superpower via the Delete button on each card
+
+## Testing
+
+12 tests across 3 suites covering all major features:
+
+- `DisplayPowers.test.jsx` — Verifies superpowers load and render correctly
+- `CrudPowers.test.jsx` — Verifies POST, PATCH, and DELETE operations
+- `SearchPowers.test.jsx` — Verifies search filtering behavior
+
+## Tech Stack
+
+- React 19
+- React Router v6
+- Vite
+- JSON Server
+- Vitest + React Testing Library
+
+## Submission
+Push to GitHub and submit the repository link through Canvas.
